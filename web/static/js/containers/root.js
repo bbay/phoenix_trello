@@ -1,5 +1,3 @@
-//web/static/js/containers/root.js
-
 import React              from 'react';
 import { Provider }       from 'react-redux';
 import { Router }         from 'react-router';
@@ -11,7 +9,7 @@ export default class Root extends React.Component {
   _renderRouter() {
     invariant(
       this.props.routingContext || this.props.routerHistory,
-      ' needs either a routingContext or routerHistory to render.'
+      '<Root /> needs either a routingContext or routerHistory to render.'
     );
 
     if (this.props.routingContext) {
@@ -20,7 +18,7 @@ export default class Root extends React.Component {
       return (
         <Router history={this.props.routerHistory}>
           {routes}
-        Router>
+        </Router>
       );
     }
   }
@@ -29,7 +27,7 @@ export default class Root extends React.Component {
     return (
       <Provider store={this.props.store}>
         {this._renderRouter()}
-      Provider>
+      </Provider>
     );
   }
 }

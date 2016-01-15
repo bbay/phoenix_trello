@@ -8,5 +8,5 @@ import RegistrationsNew       from '../views/registrations/new';
 export default (
   <Route component={MainLayout}>
     <Route path="/" component={RegistrationsNew} />
-  Route>
+  </Route>
 );
